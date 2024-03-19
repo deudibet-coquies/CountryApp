@@ -1,0 +1,13 @@
+<h2>Busqueda por Regiòn</h2>
+<hr>
+<div class="row">
+    <div class="col">
+      <app-shearch-box placeholder="Regiòn" (onValue)="searchByRegion($event)" ></app-shearch-box>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+      <contries-table [countries]="countries" ></contries-table>
+        
+    </div>
+</div>
