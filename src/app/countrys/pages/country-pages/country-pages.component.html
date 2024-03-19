@@ -3,7 +3,8 @@
     <div class="alert alert-info text-center">
       Espere por favor
     </div>
-  </ng-template>
+    <sheard-loading-spinner *ngIf="isLoading"></sheard-loading-spinner>
+</ng-template>
   
   
   <div *ngIf="country; else loading">

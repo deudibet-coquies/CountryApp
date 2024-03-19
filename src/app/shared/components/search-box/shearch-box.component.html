@@ -1,7 +1,10 @@
 <div class="input-group mb-3">
     <input 
+    (keyup)="onKeyPress(txtInput.value)" 
     (keyup.enter)="search(txtInput.value)"  
     #txtInput type="text" 
     class="form-control" 
-    [placeholder]="placeholder">
+    [placeholder]="placeholder"
+    [value]="initialValue"
+    >
 </div>

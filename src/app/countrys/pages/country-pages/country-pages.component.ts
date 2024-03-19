@@ -11,7 +11,7 @@ import { Country } from '../../interfaces/country';
 })
 export class CountryPagesComponent  implements OnInit {
 
-
+  public isLoading: boolean = false;
   public country?: Country | null;
 
   constructor( 
@@ -22,6 +22,7 @@ export class CountryPagesComponent  implements OnInit {
   
   
   ngOnInit(): void {    
+    this.isLoading = true;
     this.activatedRouter.params
     .pipe( 
       switchMap( ({ id })  => this.service.searchContryByAlfaCode(id) )
@@ -31,6 +32,7 @@ export class CountryPagesComponent  implements OnInit {
           this.router.navigateByUrl('')
         }
         this.country = resp;
+        this.isLoading = false;
         console.log('tenemos un pais');
     });
     

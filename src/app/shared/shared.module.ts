@@ -1,21 +1,23 @@
-import { RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AbautPageComponent } from './pages/abaut-page/abaut-page.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { CommonModule } from '@angular/common';
 import { ContactComponent } from './pages/contactPage/contact.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { ShearchBoxComponent } from './components/search-box/shearch-box.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
 @NgModule({
   declarations: [
-    HomePageComponent,
     AbautPageComponent,
-    SidebarComponent,
     ContactComponent,
+    HomePageComponent,
+    LoadingSpinnerComponent,
     ShearchBoxComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,    
@@ -23,11 +25,12 @@ import { ShearchBoxComponent } from './components/search-box/shearch-box.compone
     
   ],
   exports:[
-    HomePageComponent,
     AbautPageComponent,
-    SidebarComponent,    
     ContactComponent,     
+    HomePageComponent,
+    LoadingSpinnerComponent,
     ShearchBoxComponent,
+    SidebarComponent,    
   ]
 })
 export class SharedModule { }

@@ -2,11 +2,16 @@
 <hr>
 <div class="row">
     <div class="col">
-      <app-shearch-box placeholder="Paìs" (onValue)="searchByContry($event)" ></app-shearch-box>
+      <app-shearch-box placeholder="Paìs" 
+      [initialValue]="initialValue"
+      (onValue)="searchByContry($event)" 
+      (onDebounce)="searchByContry($event)" 
+      ></app-shearch-box>
     </div>
 </div>
 <div class="row">
     <div class="col">
+      <sheard-loading-spinner *ngIf="isLoading"></sheard-loading-spinner>
       <contries-table [countries]="countries" ></contries-table>
         
     </div>
